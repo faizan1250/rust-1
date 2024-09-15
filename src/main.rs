@@ -1,10 +1,18 @@
-fn main() {
-    println!("{}",is_even(7));
+use std::fs;
+
+
+fn main(){
+      let result = fs::read_to_string("a.txt");       
+      match result {
+        Ok(content) => {
+          println!("file content: {}", content);
+        },
+        Err(err) => {
+          println!("error: {}", err);
+        }
+
+      }  
+      println!("hjjhdf");
 }
 
-fn is_even(num: i32) -> i32 {
-    if num ==0 || num ==1 {
-        return num;
-    }
-    return is_even(num-1) + is_even(num-2);
-}
+ 
