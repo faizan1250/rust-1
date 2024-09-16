@@ -1,18 +1,12 @@
-use std::fs;
+mod fibo;
 
 
 fn main(){
-      let result = fs::read_to_string("a.txt");       
-      match result {
-        Ok(content) => {
-          println!("file content: {}", content);
-        },
-        Err(err) => {
-          println!("error: {}", err);
-        }
+  //let ans = fibo::fibo(1);
+  for i in 0..11{
+    println!("{}", fibo::rec_fibo(i));
+  }
+  //println!("{}", ans);
 
-      }  
-      println!("hjjhdf");
+
 }
-
- 
